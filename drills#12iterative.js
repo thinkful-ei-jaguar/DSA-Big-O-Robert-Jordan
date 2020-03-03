@@ -1,9 +1,9 @@
 function countingsheep(num) {
   for(let i=0; i<num; i){
-    console.log(num +' Another sheep jumps over the fence')
+    console.log(num +' Another sheep jumps over the fence');
     num--;
   }
-  console.log('All sheep jumped over the fence')
+  console.log('All sheep jumped over the fence');
 }
 //O(n)- retruning the same amount of numbers
 //countingsheep(10);
@@ -27,27 +27,33 @@ const a = PowerCalculator(3, 3);
 // Constant O(1) - there is afixed number of operations being run 
 
 function reverseString(str) {
-    let reverstr=[];
- for(let i=0;i<str.length;i++){
-    reverstr.push(str[str.length-1-i])
- }
- return reverstr.join("");
+  let reverstr=[];
+  for(let i=0;i<str.length;i++){
+    reverstr.push(str[str.length-1-i]);
+  }
+  return reverstr.join("");
 }
 //const teststr = reverseString('hello');
 //console.log(teststr);
 //Constant O(n)-going throught each letter and doing the same for each letter
 
 function ntriangularnumber(num) {
-  if (num === 0) {
-    return 0;
+  let result = num;
+  for (let i = 1; i < num; i++) {
+    if (num === 0) {
+      return 0;
+    }
+    if (num < 0) {
+      return;
+    }
+    result += i;
   }
-  if (num < 0) {
-    return;
-  }
-  return num + ntriangularnumber(num - 1);
+
+  return result;
 }
-const factorial = ntriangularnumber(9);
-//console.log(factorial);
+const factorial = ntriangularnumber(3);
+// console.log(factorial);
+// Linear O(n) - the operations are ran for every input 
 
 
 
