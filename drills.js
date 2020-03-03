@@ -27,3 +27,21 @@
 } */
 //polynomial O(n^2)- since there is a nested loop the function is polynomial taking that much time to solve.
 
+// Drill #4
+// function doubleArrayValues(array) {
+//   for (let i = 0; i < array.length; i++) {
+//       array[i] *= 2;
+//   }
+//   return array;
+// }
+// Constant O(1) - the output does not grow or change based on the input size 
+
+//Drill #5 
+// function naiveSearch(array, item) {
+//   for (let i = 0; i < array.length; i++) {
+//       if (array[i] === item) {
+//           return i;
+//       }
+//   }
+// }
+// Linear O(n) - the output and run time complexity iis porportional to the input size 
