@@ -31,7 +31,7 @@ function reverseString(str) {
   for(let i=0;i<str.length;i++){
     reverstr.push(str[str.length-1-i]);
   }
-  return reverstr.join("");
+  return reverstr.join('');
 }
 //const teststr = reverseString('hello');
 //console.log(teststr);
@@ -57,25 +57,28 @@ const factorial = ntriangularnumber(3);
 
 
 
+function spliter2 (param, str) {
+  let fullword = [];
+  let counter = 0;
 
-
-
-function strspliter(param, str) {
-  prevlist='';
-  newlist=str+"/";
-  fullword=[];
-  for(let i=0;i<str.length;i++){
-    if(newlist[i]==param){
-      prevlist=newlist.slice(0,i);
-      fullword.push(prevlist);
-      newlist = newlist.slice(i+1);
+  while(true) {
+    let idx = str.indexOf(param); //if it cant find the index, returns -1
+    if (idx == -1) {
+      break;
     }
+
+    fullword.push(str.slice(0, idx));
+    str = str.slice(idx + param.length);
+    counter ++;
   }
-  return fullword
+  fullword.push(str);
+  console.log(counter, 'counter');
+  return fullword;
 }
 
-const s="25/39/15";
-console.log(strspliter("/",s));
+// const s = '25/39/15';
+// console.log(spliter2('/',s));
+// Linear O(n) - the run time increases with linearly with the param input 
 
 
 

@@ -107,3 +107,31 @@ console.log(l);
 //   return arr[Math.floor(Math.random() * arr.length)];
 // }
 //  Constant O(1) - This function is returning a random item in the array, therefore it will take the same amount of time to complete no matter the input size 
+
+
+//Drill #10 
+// B -> temp
+// A -> B
+// A -> C
+// B (temp) -> C
+
+function TOH (n, source, dest, temp) {
+  if (n === 1) {
+    print(source, dest);
+  } else {
+    TOH(n-1, source, temp, dest); // TOH(1, A, B, C)
+    TOH(1, source, dest, temp);
+    TOH(n-1, temp, dest, source);
+  }
+
+}
+
+function print(a, b) {
+  console.log(`moving ${a} to ${b}`);
+}
+
+const A = [1, 2, 3];
+const B = [1, 2, 3, 4, 5];
+const C = [1, 2, 3, 4, 5, 6, 7];
+
+TOH(2, A, C, B);
