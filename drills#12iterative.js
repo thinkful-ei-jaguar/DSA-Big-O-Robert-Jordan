@@ -61,38 +61,43 @@ const factorial = ntriangularnumber(3);
 
 
 function strspliter(param, str) {
-  if (!str.length) {
-    return '';
+  prevlist='';
+  newlist=str+"/";
+  fullword=[];
+  for(let i=0;i<str.length;i++){
+    if(newlist[i]==param){
+      prevlist=newlist.slice(0,i);
+      fullword.push(prevlist);
+      newlist = newlist.slice(i+1);
+    }
   }
-  
-  let i = 0;
-  let newstr = '';
-  
-  if (str.includes(param)) {
-    i = str.indexOf(param);
-    newstr = str.slice(i + 1);
-  }
-  let thisstr = str.slice(0, i);
-  // console.log(thisstr);
-  return [thisstr, ...strspliter(param, newstr)];
+  return fullword
 }
 
+const s="25/39/15";
+
+console.log(strspliter("/",s));
 
 
 
 
-
-
-function Fibonacci(num, total = 0) {
-  if (num === 1) {
-    return 1;
-  }
-  if (num <= 0) {
-    return 0;
-  }
-  return Fibonacci(num - 1) + Fibonacci(num - 2);
+function Fibonacci(num) {
+  let result = [];
+    for (let i = 1; i <= num; i++) {
+        if (i === 1) {
+            result.push(0);
+        }
+        else if (i == 2) {
+            result.push(1);
+        }
+        else {
+            result.push(result[i - 2] + result[i - 3]);
+        }
+    }
+    return result;
 }
-// console.log(Fibonacci(7));
+//console.log(Fibonacci(7));
+//O(n)-linear beacuse you get back the same amount you inputted
   
 
 
