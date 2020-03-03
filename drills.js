@@ -54,7 +54,7 @@
         }
     }
 } */
-//constant O(1) - its just returning the double size of that array so 2 is o miniscule that it get taken out from complexity.
+//Polynomial O(n^2) - its just returning the double size of that array sand there is a nested for loop within the function
 
 //Drill #7 //fibbonacci
 /* function compute(num) {
@@ -77,3 +77,33 @@
 console.log(l);
  */
 
+// Drill #8 
+// function efficientSearch(array, item) {
+//   let minIndex = 0;
+//   let maxIndex = array.length - 1;
+//   let currentIndex;
+//   let currentElement;
+
+//   while (minIndex <= maxIndex) {
+//       currentIndex = Math.floor((minIndex + maxIndex) / 2);
+//       currentElement = array[currentIndex];
+
+//       if (currentElement < item) {
+//           minIndex = currentIndex + 1;
+//       }
+//       else if (currentElement > item) {
+//           maxIndex = currentIndex - 1;
+//       }
+//       else {
+//           return currentIndex;
+//       }
+//   }
+//   return -1;
+// }
+// Logarithmic O(log(n)) - This functions run time would increase with a larger input but it would increase very slowly. It is also cutting the problem in half when it runs through 
+
+//Drill # 9 
+// function findRandomElement(arr) {
+//   return arr[Math.floor(Math.random() * arr.length)];
+// }
+//  Constant O(1) - This function is returning a random item in the array, therefore it will take the same amount of time to complete no matter the input size 
