@@ -85,4 +85,21 @@
 //   anagrams(' ', word);
 // }
 // Exponential O(2^n) - the longer the word (greater input) the longer the running time and output from the function
+//Drill #11 
+/* function traverseB(node, indent=0) {
+	for (var key in node) {
+		console.log(" ".repeat(indent), key);
+		traverseB(node[key], indent + 4);
+	}
+} */
+//O(1)-just manipulates data and organizes it 
+//Drill #12
+/* function binaryRep(input){
+    if(input<=0){
+        return '';
+    } 
+    let binary = Math.floor(input%2);
+    return binaryRep(Math.floor(input/2)) + binary
+} */
+//polynomialO(n^k) it will keep on increasing for bigger numbers
 
