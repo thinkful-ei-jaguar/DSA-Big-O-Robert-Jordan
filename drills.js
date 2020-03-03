@@ -45,3 +45,35 @@
 //   }
 // }
 // Linear O(n) - the output and run time complexity iis porportional to the input size 
+
+//Drill #6              
+/* function createPairs(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            console.log(arr[i] + ", " +  arr[j] );
+        }
+    }
+} */
+//constant O(1) - its just returning the double size of that array so 2 is o miniscule that it get taken out from complexity.
+
+//Drill #7 //fibbonacci
+/* function compute(num) {
+    let result = [];
+    for (let i = 1; i <= num; i++) {
+        if (i === 1) {
+            result.push(0);
+        }
+        else if (i == 2) {
+            result.push(1);
+        }
+        else {
+            result.push(result[i - 2] + result[i - 3]);
+        }
+    }
+    return result;
+} */
+// 
+/* const l = compute(10);
+console.log(l);
+ */
+
