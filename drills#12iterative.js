@@ -26,27 +26,16 @@ const a = PowerCalculator(3, 3);
 // console.log(a);
 // Constant O(1) - there is afixed number of operations being run 
 
-
-
-
-
 function reverseString(str) {
-  if (!str.length) {
-    return '';
-  }
-  return str[str.length - 1] + reverseString(str.slice(0, -1));
+    let reverstr=[];
+ for(let i=0;i<str.length;i++){
+    reverstr.push(str[str.length-1-i])
+ }
+ return reverstr.join("");
 }
-const teststr = reverseString('hello');
+//const teststr = reverseString('hello');
 //console.log(teststr);
-
-
-
-
-
-
-
-
-
+//Constant O(n)-going throught each letter and doing the same for each letter
 
 function ntriangularnumber(num) {
   if (num === 0) {
