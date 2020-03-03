@@ -75,7 +75,6 @@ function strspliter(param, str) {
 }
 
 const s="25/39/15";
-
 console.log(strspliter("/",s));
 
 
@@ -83,18 +82,18 @@ console.log(strspliter("/",s));
 
 function Fibonacci(num) {
   let result = [];
-    for (let i = 1; i <= num; i++) {
-        if (i === 1) {
-            result.push(0);
-        }
-        else if (i == 2) {
-            result.push(1);
-        }
-        else {
-            result.push(result[i - 2] + result[i - 3]);
-        }
+  for (let i = 1; i <= num; i++) {
+    if (i === 1) {
+      result.push(0);
     }
-    return result;
+    else if (i == 2) {
+      result.push(1);
+    }
+    else {
+      result.push(result[i - 2] + result[i - 3]);
+    }
+  }
+  return result;
 }
 //console.log(Fibonacci(7));
 //O(n)-linear beacuse you get back the same amount you inputted
@@ -105,9 +104,18 @@ function Fibonacci(num) {
 
 
 function Factorial(num) {
-  if (num === 1) {
-    return 1;
+  let result = num;
+  for (let i = 1; i < num; i++) {
+    if (num === 0) {
+      return 0;
+    }
+    if (num < 0) {
+      return;
+    }
+    result *= i;
   }
-  return Factorial(num - 1) * num;
+
+  return result;
 }
 // console.log(Factorial(5));
+// Linear O(n) - the same operations are ran for every input 
